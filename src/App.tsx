@@ -1,11 +1,23 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { css } from '@emotion/react';
+import styled from '@emotion/styled';
+
+const containerStyles = css`
+  background-color: pink;
+`;
+
+const Button = styled.button`
+  width: 200px;
+  height: 200px;
+`;
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" css={containerStyles}>
       <header className="App-header">
+        <Button>스타일 버튼</Button>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
